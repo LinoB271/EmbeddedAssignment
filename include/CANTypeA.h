@@ -99,6 +99,6 @@ private:
 	/// <summary>
 	/// Array that contains the valid baud rates for the CAN system.
 	/// </summary>
-	const static std::array<uint32_t, 3> validBaudRates;
+	const static std::array<uint32_t, 3> mValidBaudRates;
 };
 

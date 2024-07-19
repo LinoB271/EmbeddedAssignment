@@ -93,7 +93,7 @@ void CANTypeA::SetPassive()
 
 bool CANTypeA::SetBaudRate(const uint32_t baudRate)
 {
-	if (std::find(validBaudRates.begin(), validBaudRates.end(), baudRate) != validBaudRates.end())
+	if (std::find(mValidBaudRates.begin(), mValidBaudRates.end(), baudRate) != mValidBaudRates.end())
 	{
 		if (this->mBaudRate != baudRate)
 		{
@@ -124,4 +124,4 @@ bool CANTypeA::HandleMessage()
 
 // Private members:
 
-const std::array<uint32_t, 3> CANTypeA::validBaudRates = { 125000, 250000, 500000 };
+const std::array<uint32_t, 3> CANTypeA::mValidBaudRates = { 125000, 250000, 500000 };
