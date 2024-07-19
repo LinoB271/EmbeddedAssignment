@@ -18,22 +18,22 @@
     <ClCompile Include="src\EmbeddedAssignment.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\CANTypeA.cpp">
+    <ClCompile Include="src\CanTypeA.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\ICAN.h">
-      <Filter>include\</Filter>
-    </ClInclude>
-    <ClInclude Include="include\CANTypeA.h">
+    <ClInclude Include="include\CanTypeA.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\eBaudRate.h">
-      <Filter>include\</Filter>
+    <ClInclude Include="include\EBaudRate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ICan.h">
+      <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\Utilities.h">
-      <Filter>include\</Filter>
+      <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

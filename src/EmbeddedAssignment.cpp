@@ -1,12 +1,12 @@
 #include <iostream>
 
-#include "CANTypeA.h"
+#include "CanTypeA.h"
 #include "Utilities.h"
 
 int main()
 {
 	// Declare needed parametes for testing.
-	std::unique_ptr<ICAN> canTypeAPointer = std::make_unique<CANTypeA>();
+	std::unique_ptr<ICan> canTypeAPointer = std::make_unique<CanTypeA>();
 	uint8_t testSendMessage[] = {1, 2, 3, 4};
 	uint8_t testFetchMessage[15];
 
@@ -23,7 +23,7 @@ int main()
 	}
 
 	// Get raw pointer from smart pointer to point to the same object.
-	CANTypeA* specificCANTypeAPointer = static_cast<CANTypeA*>(canTypeAPointer.get());
+	CanTypeA* specificCANTypeAPointer = static_cast<CanTypeA*>(canTypeAPointer.get());
 
 	try
 	{

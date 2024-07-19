@@ -4,16 +4,16 @@
 #include <stdexcept>
 #include <sstream>
 
-#include "CANTypeA.h"
+#include "CanTypeA.h"
 #include "Utilities.h"
 
 // Constructors:
 
-CANTypeA::CANTypeA() : mBaudRate{ 0 }, mInitialized{ false }, mActive{ false } {}
+CanTypeA::CanTypeA() : mBaudRate{ 0 }, mInitialized{ false }, mActive{ false } {}
 
 // Public methods:
 
-bool CANTypeA::Initialize()
+bool CanTypeA::Initialize()
 {
 	if (this->mInitialized != true)
 	{
@@ -27,7 +27,7 @@ bool CANTypeA::Initialize()
 	}
 }
 
-bool CANTypeA::SendData(const uint8_t* data, uint8_t const dataLength) const
+bool CanTypeA::SendData(const uint8_t* data, uint8_t const dataLength) const
 {
 	// Check for null pointer.
 	CHECK_NULLPTR(data);
@@ -40,7 +40,7 @@ bool CANTypeA::SendData(const uint8_t* data, uint8_t const dataLength) const
 	return true;
 }
 
-std::future<std::tuple<bool, uint8_t>> CANTypeA::FetchData(uint8_t* const dataBuffer, const uint8_t bufferSize) const
+std::future<std::tuple<bool, uint8_t>> CanTypeA::FetchData(uint8_t* const dataBuffer, const uint8_t bufferSize) const
 {
 	// Check for null pointer.
 	CHECK_NULLPTR(dataBuffer);
@@ -63,7 +63,7 @@ std::future<std::tuple<bool, uint8_t>> CANTypeA::FetchData(uint8_t* const dataBu
 		});
 }
 
-void CANTypeA::SetActive()
+void CanTypeA::SetActive()
 {
 	if (this->mActive != true)
 	{
@@ -76,7 +76,7 @@ void CANTypeA::SetActive()
 	}
 }
 
-void CANTypeA::SetPassive()
+void CanTypeA::SetPassive()
 {
 	if (this->mActive != false)
 	{
@@ -91,7 +91,7 @@ void CANTypeA::SetPassive()
 
 // Private methods:
 
-bool CANTypeA::SetBaudRate(const uint32_t baudRate)
+bool CanTypeA::SetBaudRate(const uint32_t baudRate)
 {
 	if (std::find(mValidBaudRates.begin(), mValidBaudRates.end(), baudRate) != mValidBaudRates.end())
 	{
@@ -116,7 +116,7 @@ bool CANTypeA::SetBaudRate(const uint32_t baudRate)
 	}
 }
 
-bool CANTypeA::HandleMessage()
+bool CanTypeA::HandleMessage()
 {
 	std::cout << CurrentTime() << "Message was handled successfully!" << std::endl;
 	return true;
@@ -124,4 +124,4 @@ bool CANTypeA::HandleMessage()
 
 // Private members:
 
-const std::array<uint32_t, 3> CANTypeA::mValidBaudRates = { 125000, 250000, 500000 };
+const std::array<uint32_t, 3> CanTypeA::mValidBaudRates = { 125000, 250000, 500000 };

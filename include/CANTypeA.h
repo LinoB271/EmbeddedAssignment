@@ -1,11 +1,11 @@
 #pragma once
 
-#include "ICAN.h"
+#include "ICan.h"
 
 /// <summary>
 /// Representation of the CAN type A.
 /// </summary>
-class CANTypeA : public ICAN
+class CanTypeA : public ICan
 {
 public:
 
@@ -14,14 +14,14 @@ public:
 	/// <summary>
 	/// Default destructor.
 	/// </summary>
-	~CANTypeA() override = default;
+	~CanTypeA() override = default;
 
 	// Constructors:
 
 	/// <summary>
 	/// Default constructor.
 	/// </summary>
-	CANTypeA();
+	CanTypeA();
 
 	// Interface methods:
 

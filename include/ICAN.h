@@ -3,19 +3,19 @@
 #include <cstdint>
 #include <future>
 
-#include "eBaudRate.h"
+#include "EBaudRate.h"
 
 /// <summary>
 /// Interface for the different CAN types.
 /// </summary>
-class ICAN
+class ICan
 {
 public:
 
 	/// <summary>
 	/// Default destructor.
 	/// </summary>
-	virtual ~ICAN() = default;
+	virtual ~ICan() = default;
 
 	/// <summary>
 	/// Initializes the derived CAN type.
@@ -47,7 +47,7 @@ public:
 	/// </summary>
 	/// <param name="baudRate">The desired baud rate as enum.</param>
 	/// <returns>Calls the protected 'SetBaudRate' method.</returns>
-	virtual bool SetBaudRate(const eBaudRate baudRate)
+	virtual bool SetBaudRate(const EBaudRate baudRate)
 	{
 		return SetBaudRate(static_cast<uint32_t>(baudRate));
 	}
