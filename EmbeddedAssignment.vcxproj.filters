@@ -24,16 +24,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ICAN.h">
-      <Filter>include</Filter>
+      <Filter>include\</Filter>
     </ClInclude>
     <ClInclude Include="include\CANTypeA.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\eBaudRate.h">
-      <Filter>include</Filter>
+      <Filter>include\</Filter>
     </ClInclude>
     <ClInclude Include="include\Utilities.h">
-      <Filter>include</Filter>
+      <Filter>include\</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
